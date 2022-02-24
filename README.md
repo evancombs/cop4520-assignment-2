@@ -2,7 +2,7 @@
 ## Problem 1: Minotaur's Birthday Party
 
 Compile with: 
-  ```"java MinotaurMaze.java"```
+  ```"javac MinotaurMaze.java"```
   
 Run with: ```"java MinotaurMaze <number of guests>"```
 
