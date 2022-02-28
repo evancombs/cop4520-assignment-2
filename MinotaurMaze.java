@@ -14,7 +14,7 @@ class MinotaurMaze
     catch(Exception e)
     {
       System.out.println(e);
-      System.out.println("Error -- Run with \"java Labyrinth.java <number of guests>\"");
+      System.out.println("Error -- Run with \"java MinotaurMaze.java <number of guests>\"");
       return;
     }
 
