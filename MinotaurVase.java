@@ -50,9 +50,12 @@ class Showroom implements Runnable
     // All threads will reach here, and hang while the guests (thread) that has
     // acquired the lock looks at the vase;
     enjoyParty();
+
     boolean interestedInVase = true;
     while(interestedInVase)
     {
+      System.out.println("Guest " + Thread.currentThread().getName() +
+                         " is interested in the vase, and gets in the queue.");
       queueLock.lock();
       try
       {
@@ -62,7 +65,6 @@ class Showroom implements Runnable
       {
         queueLock.unlock();
       }
-      // interestedInVase = false;
       // The vase is so enthralling that a guest may decide to get back in line again.
 
       if (Math.random() <= 0.5)
@@ -77,7 +79,7 @@ class Showroom implements Runnable
 
   public void lookAtVase()
   {
-    System.out.println("Guest " + Thread.currentThread().getName() +
+    System.out.println("   Guest " + Thread.currentThread().getName() +
                        " looks at the vase, and is very impressed.");
   }
 
@@ -86,6 +88,8 @@ class Showroom implements Runnable
   {
     try
     {
+      System.out.println("Guest " + Thread.currentThread().getName() +
+                         " decides to enjoy the rest of the party.");
       Thread.sleep((long) Math.random());
     }
     catch(Exception e)

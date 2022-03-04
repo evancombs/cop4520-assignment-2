@@ -23,7 +23,8 @@ assignment. Each guest (thread) continually enters the maze; it is impossible to
 in what order they do so.
 
 A simple test-and-set lock called MazeLock ensures that only one guest enters the
-labyrinth at a time.
+labyrinth at a time. This approach is a type of spinlock and is deadlock-free, but
+this simulation basically guarantees starvation.
 
 My solution makes use of two atomic variables, but they are not used to communicate between guests except for the status of the cupcake, and the status of the end of the "game" (as the Minotaur
 would stop sending people into the maze).
