@@ -22,8 +22,11 @@ The "randomness" of the guest scheduling is simulated by the random nature of th
 assignment. Each guest (thread) continually enters the maze; it is impossible to know
 in what order they do so.
 
-My solution makes use of two atomic variables, but they are not used to communicate between guests except for the status of the cupcake, and the status of the end of the "game" (so the guests know when to
-stop entering the maze).
+A simple test-and-set lock called MazeLock ensures that only one guest enters the
+labyrinth at a time.
+
+My solution makes use of two atomic variables, but they are not used to communicate between guests except for the status of the cupcake, and the status of the end of the "game" (as the Minotaur
+would stop sending people into the maze).
 
 
 ## Problem 2: Minotaur’s Crystal Vase
