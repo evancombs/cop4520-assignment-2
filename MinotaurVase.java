@@ -1,3 +1,6 @@
+// COP4520 Spring 2022
+// Evan Combs
+// Assignment 2, Problem 2: Minotaur's Crystal Vase
 import java.util.ArrayList;
 import java.lang.Runnable;
 import java.util.concurrent.locks.Lock;

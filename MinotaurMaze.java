@@ -1,3 +1,6 @@
+// COP4520 Spring 2022
+// Evan Combs
+// Assignment 2, Problem 1: Minotaur's Birthday Party
 import java.util.ArrayList;
 import java.lang.String;
 import java.util.concurrent.atomic.AtomicBoolean;
